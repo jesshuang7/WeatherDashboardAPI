@@ -3,12 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./Assets/style.css">
     <title>weatherdashboard</title>
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/Assets/script.js"></script>
+    <header class="row dashboard pt-2 pb-2">
+        <h1>Weather Dashboard</h1>
+    </header>
 
+    <!-- Search form  -->
+    <!-- float to the left. create a container, and make columns -->
+    <div class="search col-3 pb-4"> 
+        <h5 class="searchtitle pt-2 pl-3">Search for a City: </h5>
+
+        <div class="input-group mb-3 ml-2">
+            <input type="text" class="form-control" id="city-input">
+            <div class="input-group-append">
+                <button type="button" class="btn btn-primary" id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+
+        <div class="btn-group-vertical ml-2" id="buttons-view">
+            <!-- <button type="button" class="btn btn-light">Austin</button>
+            <button type="button" class="btn btn-light">Chicago</button>
+            <button type="button" class="btn btn-light">New York</button> -->
+        </div>   
+    </div>
+
+    <div class="card ml-5">
+        <div class="card ml-3">
+                <h3 id="cityname"> City: </h3>
+            <div>
+                <img id="wicon">
+            </div>
+            <p>Temperature: <span id="temperature"></span></p>
+            <p>Humidity: <span id="humidity"></span></p>
+            <p>Wind Speed: <span id="windspeed"></span></p>
+            <p>UV index: <span id="uvindex"></span></p>
+           
+        </div>
+        <h3 class="ml-3"> 5-Day Forecast: </h3>
+        <div class="row ml-3" id="5dayforecast">
+            <!-- <div class="card" >hello</div> -->
+        </div>
+    </div>
+
+    <!-- <div class="data-display col-8 ml-3 pl-5">
+        <div class="row currentdayweather">
+            <h2 class="name"></h2>
+            <p class="row date"></p>
+            <p class="temperature"></p>
+            <p><span>Temperature: </span></p>
+            <p class="humidity"></p>
+            <p><span>Humidity: </span></p>
+            <p class="windspeed"></p>
+            <p class="UVindex"></p>
+            <p>Temperature: <span id="temperature"></span></p>
+            <p>Humidity: <span id="humidity"></span></p>
+            <p>Wind Speed: <span id="windspeed"></span></p>
+            <p>UV Index: <span id="uv"></span></p>
+        </div>
+        <div class="row 5dayforecast">
+            <div class="date2"></div>
+            <div class=""></div>
+            <div class=""></div>
+        </div>
+    </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./Assets/script.js"></script>
+ 
     
 </body>
 </html>

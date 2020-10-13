@@ -1,0 +1,44 @@
+
+.dashboard{
+    background-color: #313131;
+    color: white;
+    display: block;
+    text-align: center;    
+}
+
+.search {
+    background-color: #eeeeee;
+    float: left;
+    /* height: 500px; */
+}
+
+.searchtitle {
+    color: #313131;
+}
+
+.data-display {
+    background-color: aquamarine;
+    display: inline-flex;
+}
+
+#wicon {
+    display: inline;
+}
+
+/* UV index 0-2 */
+.favorable {
+    background-color: #40a72d;
+    color: white;
+}
+
+/* UV index 3-5 */
+.moderate {
+    background-color: yellow;
+    color: black;
+}
+
+/* UV index 5 above */
+.severe {
+    background-color: red;
+    color: white;
+}
