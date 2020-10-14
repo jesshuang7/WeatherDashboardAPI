@@ -1,15 +1,7 @@
 
+var cities = [];   
+var cityName = "";
 
-
-
-// A. WEHN user searches cities, they will get 
-    // 1. the current day weather:
-        // 1. +ajax url
-        // 2. city name, date, image, temperature, humidity, wind speed, 
-    // 2. UV index 
-
-
-var cities = [];    
 function renderButtons() {
     
     // Clear buttonlist element 
@@ -28,14 +20,14 @@ function renderButtons() {
         event.preventDefault();
         // grab the text from the city search input
         cityName = $(this).text();
-        console.log($(this).text());
-        searchFunction();    
+        searchFunction(); 
             
     });
 
 }
 
 init();
+
 function init() {
     // Get stored cities from localStorage
     // Parsing the JSON string to an object
@@ -47,11 +39,11 @@ function init() {
     
     // Render cities to the DOM
     renderButtons();
+    cityName = localStorage.getItem("lastcity");
+
     searchFunction();
+
 }
-
-
-
 
 function searchFunction() {
 
@@ -87,10 +79,8 @@ function searchFunction() {
         method: "GET"
     }).then(function(response){
 
-        console.log(response);
         currentDayWeather(response);
        
-
         // Display UV index
         var currentUVindex = "http://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=" +APIKey;
 
@@ -100,8 +90,6 @@ function searchFunction() {
             url: currentUVindex,
             method: "GET"
         }).then(function(uvresponse){
-
-            console.log(uvresponse);
 
             $("#uvindex").text(uvresponse.value);
             if (uvresponse.value < 3 ) {
@@ -138,7 +126,6 @@ function searchFunction() {
              // Get weather icon
              let iconcode = response.list[i].weather[0].icon;
              let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-             console.log(iconurl);
              let weathericon = $("<img>");
              weathericon.attr('src', iconurl);
              let divEl = $("<div>");
@@ -168,14 +155,10 @@ function searchFunction() {
         method: "GET"
     }).then(function(response){
        
-        console.log(response);
-
         // call fiveDayForecast function
         $("#5dayforecast").empty();
         fiveDayForecast(response);     
     })
-
-    
     
     function storedCities () {
         // Stringify and set "cities" key in localStorage to cities array
@@ -183,38 +166,46 @@ function searchFunction() {
     }
     
     var city = $("#city-input").val().trim();
-    
-    // if (city !== "" || cities.includes(city) == false ) { 
-        //     cities.push(city);
-        
-        //     storedCities ();
-        
-        // }
-        // renderButtons();
      
     // Return from function early if submitted city-input is blank
     if (city === "" ) {
         return;        
     }
         
+    for (let i = 0; i < cities.length; i++) {
+        if (city === cities[i]) {
+            alert ("You have already searched" + cities[i] )
+            return;
+        } 
+    }
+
     // Add new city button to cities array, clear the input
     cities.push(city);
     $("#city-input").val("");   
-
     storedCities();
-    renderButtons();
+    renderButtons(); 
         
 
 }
+
+
 
 $("#searchBtn").on("click", function(event) {
     event.preventDefault();
     // grab the text from the city search input
     cityName = $("#city-input").val();
     searchFunction(); 
-    // $("#city-input").val("");   
-        
+    if (cityName === "") {
+        return;
+    }
+    localStorage.setItem("lastcity", cityName);
+    console.log(cityName);
+    console.log(cities);
+            
 });
+
+
+
 
 
 
