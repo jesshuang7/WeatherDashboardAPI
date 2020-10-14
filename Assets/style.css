@@ -3,13 +3,14 @@
     background-color: #313131;
     color: white;
     display: block;
-    text-align: center;    
+    text-align: center;   
+    margin-bottom: 5px; 
 }
 
 .search {
-    background-color: #eeeeee;
+    /* background-color: #eeeeee; */
     float: left;
-    /* height: 500px; */
+    height: 500px;
 }
 
 .searchtitle {
@@ -41,4 +42,10 @@
 .severe {
     background-color: red;
     color: white;
+}
+
+.fiveDayCard {
+    color: white;
+    padding: 5px;
+    margin: 6px;
 }
