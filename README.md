@@ -1,10 +1,32 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Weather_Dashboard
 
-Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+Explore the [Project Page](https://github.com/jesshuang7/WeatherDashboardAPI)
 
-Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that will provide basic setup and usage instructions. Use `localStorage` to store any persistent data.
+View the [Github-pages](https://jesshuang7.github.io/WeatherDashboardAPI/)
 
-## User Story
+## Table of Contents
+
+* [About the Project](#about-the-project)
+  * [User Story](#user-story)
+  * [HTML](#html)
+  * [Assets](#Assets)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#License)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
+## About the Project:
+The focus of this project was to use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities and use `localStorage` to store any persistent data. The dashboard will display the current weather of temperature, humidity, wind speed, and UV index, which will be color coded upon dangerness. It will also display the five-day forecast with its date, temperature, weather icon, humidity. The search history will be added as buttons to retreive history.
+
+
+![Project Gif](Assets/weather.gif)
+
+### User Story
 
 ```
 AS A traveler
@@ -12,35 +34,68 @@ I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 ```
 
-## Acceptance Criteria
+### HTML:
+* [index.html](https://github.com/jesshuang7/WeatherDashboardAPI/blob/master/index.html)
 
+### Assets:
+* [style.css](https://github.com/jesshuang7/WeatherDashboardAPI/blob/master/Assets/style.css)
+
+### Built With:
+* This app is build upon [OpenWeather API](https://openweathermap.org/api)
+
+## Getting Started:
+To get a local copy up and running follow the steps below.
+
+### Prerequisites:
+None.
+
+### Installation:
+1. Clone the Repository:
+```sh
+git clone git@github.com:jesshuang7/WeatherDashboardAPI.git
 ```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-WHEN I open the weather dashboard
-THEN I am presented with the last searched city forecast
-```
 
-The following image demonstrates the application functionality:
+## Roadmap:
+Currently no known issues, but track track [open issues](https://github.com/jesshuang7/WeatherDashboardAPI/issues ) for proposed features (and known issues) in the future.
 
-![weather dashboard demo](./Assets/06-server-side-apis-homework-demo.png)
 
-## Review
+## Contributing:
+Any contributions you make are **greatly appreciated**.
 
-You are required to submit the following for review:
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-* The URL of the deployed application.
+## License:
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+MIT License
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+Copyright (c) [2020] [Jessica Huang]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Contact:
+Jessica Huang - tzunuhuang@gmail.com
+
+Project Link: [https://github.com/jesshuang7/WeatherDashboardAPI](https://github.com/jesshuang7/WeatherDashboardAPI)
+
+## Acknowledgements: 
+* University of Washington Coding Bootcamp for providing me with the skills and knowledge to create this project. 

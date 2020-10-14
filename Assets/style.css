@@ -17,10 +17,6 @@
     color: #313131;
 }
 
-.data-display {
-    background-color: aquamarine;
-    display: inline-flex;
-}
 
 #wicon {
     display: inline;
@@ -29,19 +25,26 @@
 /* UV index 0-2 */
 .favorable {
     background-color: #40a72d;
+    padding: 6px;
     color: white;
+    border-radius: 5px;
 }
 
 /* UV index 3-5 */
 .moderate {
     background-color: yellow;
+    padding: 6px;
     color: black;
+    border-radius: 5px;
+
 }
 
 /* UV index 5 above */
 .severe {
     background-color: red;
+    padding: 6px;
     color: white;
+    border-radius: 5px;
 }
 
 .fiveDayCard {

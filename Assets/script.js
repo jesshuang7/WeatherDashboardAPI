@@ -172,12 +172,14 @@ function searchFunction() {
         return;        
     }
         
+    // Make sure no search cities are overlapped
     for (let i = 0; i < cities.length; i++) {
         if (city === cities[i]) {
             alert ("You have already searched" + cities[i] )
             return;
         } 
     }
+
 
     // Add new city button to cities array, clear the input
     cities.push(city);
@@ -198,6 +200,7 @@ $("#searchBtn").on("click", function(event) {
     if (cityName === "") {
         return;
     }
+     
     localStorage.setItem("lastcity", cityName);
     console.log(cityName);
     console.log(cities);
