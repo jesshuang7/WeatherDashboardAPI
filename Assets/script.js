@@ -50,7 +50,7 @@ function searchFunction() {
     // construct URL
     var APIKey ="b8af085dc2c5f86081eb908fd3532ff4";
     var queryURLcurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
-    var queryURLforecast = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + APIKey;
+    var queryURLforecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + APIKey;
     
     function currentDayWeather (response) {
         //  Time of data receiving in unixtime GMT
@@ -61,7 +61,7 @@ function searchFunction() {
         // Display weather icon
         $("#cityname").text(response.name + "(" + displayDate + ")");
         let iconcode = response.weather[0].icon;
-        let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        let iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
         $('#wicon').attr('src', iconurl);
 
         // Display temperature, humidity, windspeed
@@ -82,7 +82,7 @@ function searchFunction() {
         currentDayWeather(response);
        
         // Display UV index
-        var currentUVindex = "http://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=" +APIKey;
+        var currentUVindex = "https://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=" +APIKey;
 
 
         // API call for current UV index inside current day weather
@@ -125,7 +125,7 @@ function searchFunction() {
 
              // Get weather icon
              let iconcode = response.list[i].weather[0].icon;
-             let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+             let iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
              let weathericon = $("<img>");
              weathericon.attr('src', iconurl);
              let divEl = $("<div>");
